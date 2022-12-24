@@ -6,10 +6,10 @@ public class StatsServiceTest {
 
     @Test
 
-    public void shouldFindMinMonth () {
+    public void shouldFindMinMonth() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
 
         long expected = 9;
         long actual = service.minSales(sales);
@@ -19,10 +19,10 @@ public class StatsServiceTest {
 
     @Test
 
-    public void shouldFindMaxMonth () {
+    public void shouldFindMaxMonth() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
 
         long expected = 6;
         long actual = service.maxSales(sales);
@@ -31,10 +31,10 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void sumAllSales () {
+    public void sumAllSales() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 180;
         long actual = service.sumOfAllSales(sales);
@@ -43,23 +43,23 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void middleNumber () {
+    public void middleNumber() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 15;
-        long actual = service.middleNumberOfSales(sales);
+        long actual = service.average(sales);
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
 
-    public void monthsBelowMiddle () {
+    public void monthsBelowMiddle() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 5;
         long actual = service.belowMiddle(sales);
@@ -69,10 +69,10 @@ public class StatsServiceTest {
 
     @Test
 
-    public void monthsMoreThanMiddle () {
+    public void monthsMoreThanMiddle() {
         StatsService service = new StatsService();
 
-        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 5;
         long actual = service.moreMiddle(sales);

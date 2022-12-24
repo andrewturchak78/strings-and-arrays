@@ -40,20 +40,13 @@ public class StatsService {
         return sum;
     }
 
-    public int middleNumberOfSales(long[] sales) {
-        int sum = 0;
-        for (long amount : sales) {
-            sum += amount;
-        }
+    public int average(long[] sales) {
+        int sum = sumOfAllSales(sales);
         return sum / sales.length;
     }
 
     public int belowMiddle(long[] sales) {
-        int sum = 0;
-        for (long amount : sales) {
-            sum += amount;
-        }
-        int middle = sum / sales.length;
+        int middle = average(sales);
         int months = 0;
         for (long sale : sales) {
             if (sale < middle) {
@@ -64,11 +57,7 @@ public class StatsService {
     }
 
     public int moreMiddle(long[] sales) {
-        int sum = 0;
-        for (long amount : sales) {
-            sum += amount;
-        }
-        int middle = sum / sales.length;
+        int middle = average(sales);
         int months = 0;
         for (long sale : sales) {
             if (sale > middle) {
